@@ -1,23 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="publicar" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet/publicar_style.css">
-    <title>GRITO - Publicar serviço</title>
-
+    <meta name="GRITO" content="width=device-width, initial-scale=1.0">
+    <title>GRITO - Publicar Serviço</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/publicar_style.css">
 </head>
 <body>
     <header class="header">
-        <img src="IMAGENS/logo_grito.pnG" style="float: left">
-        <nav>
-            <ul id="nav_bar">
-                <li><a href="">Nome do usuario</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href=""><img src="imagens/notification.png"></a></li>
+        <div class="container">
+            <a href="index.html" class="grid-4"><img src="img/logo.png" alt="logo grito"></a>
+        </div>
+        <nav class="header_menu" "grid-12">
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <p style="font-weight: bold;">Thomas Com-Aga</p>
+                        <div class="dropdown-content">
+                            <a href="#">Meu perfil</a>
+                            <a href="#">Faturas</a>
+                            <a href="#">Minha área</a>
+                            <a href="#">Formas de pagamento</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="serviços.html">Serviços</a></li>
+                <li><a href="clientes.html">Clientes</a></li>
+                <li><a href="dashboard.html"><img src="img/notification.png" alt=""></a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <section class="corpo">
+        <h2>Encontre o profissional que você precisa! Os melhores estão aqui.</h2>
+        <p>Não se preocupe, o pagamento só será liberado após você marcar que está tudo certo!</p>
+        <form action="#">
+            <div class="dados_servico">
+                <div>
+                    <label for="prestador">Escolha um profissional</label>
+                </div>
+                <div>
+                        <select name="profissional" id="profissional">
+                            <option value="jd">jardineiro</option>
+                            <option value="elet">Eletricista</option>
+                            <option value="enc">Encanador</option>
+                            <option value="pd">Pedreiro</option>
+                            <option value="mani">Manicure</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                </div>
+                <div>
+                    <label for="data">Qual a data e hora?</label>
+                </div>
+                <div>
+                    <input type="date" id="data"> <input type="time" name="hora" id="hora">
+                </div>
+                <div>
+                    <label for="fone">Seu telefone para contato</label> 
+                </div>
+                <div>
+                    <input type="tel" placeholder="(99) 9 9999-9999">
+                </div>
+                <div>
+                    <label for="detalhes">Nos conte mais...</label>
+                </div>
+                <div>
+                    <textarea name="detalhes" id="detalhes" cols="40" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="dados_end_fpag">
+                <div>
+                    <label for="rua">Rua</label>
+                </div>
+                <div>
+                    <input id="rua" type="text">
+                </div>
+                <div>
+                    <label for="bairro">Bairro</label>
+                </div>
+                <div>
+                    <input id="bairro" type="text">
+                </div>
+                <div>
+                    <label for="Comple">Complemento</label>
+                </div>
+                <div>
+                    <input id="Comple" type="text">
+                </div>
+                <div class="formaspag">
+                    <label for="fpag">Forma de pagamento</label>
+                </div>
+                <div >
+                    <select name="formapag" id="fpag">
+                        <option value="cardc">Cartão de crédito</option>
+                        <option value="cardd">Cartão de débito</option>
+                        <option value="cred">Crédito GRITO</option>
+                        <option value="din">Dinheiro(somente moeda nacional)</option>
+                    </select>
+                </div>
+                <div  style="padding-top: 10px;">
+                     <input type="checkbox" id="salvar"> <label for="salvar">Salvar estas informações para próximas vezes?</label>
+                </div>
+                <input type="button" value="Publicar" onclick="msg(Sua publicação foi feita)">
+            </div>
+            <div class="uf_pais">
+                <div>
+                    <label for="residencia">Nº</label>
+                </div>
+                <div>
+                    <input type="number" id="residencia" name="num_house">
+                </div>
+                <div>
+                    <label for="CEP">CEP</label>
+                </div>
+                <div>
+                    <input type="local" id="CEP" name="CEP" class="CEP">
+                </div>
+                <div style="padding-top: 10px;">
+                    <label for="UF">Estado</label>
+                    <select name="esados" id="est">
+                        <option value="PR">PR</option>
+                        <option value="RS">RS</option>
+                        <option value="SC">SC</option>
+                    </select>
+                    <label for="pais">País</label>
+                    <select name="pais" id="pais">
+                        <option value="BR">Brasil</option>
+                        <option value="arg">Argentina</option>
+                        <option value="PY">Paraguai</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </section>
 </body>
 </html>
