@@ -80,8 +80,9 @@ body{
 .dados_servico{
     text-align: left;
     padding-bottom: 10px;
-    width: 50%;
+    width: 40%;
     float: left;
+    margin-left: 60px;
 }
 
 .dados_end_fpag{
